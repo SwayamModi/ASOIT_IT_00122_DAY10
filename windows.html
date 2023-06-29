@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>window object</h1>
+    <h2>javascript window</h2>
+    <p id="bom"></p>
+    <script>
+        document.getElementById("bom").innerHTML=
+        "Browser inner window width: " + window.innerWidth + "px<br>" +
+        "Browser inner window height: " + window.innerHeight + "px";
+    </script>
+    <h2>the open method</h2>
+    <p>Click the button to open a new window</p>
+    <button onclick="myfunction()">Try it</button>
+    <script>
+        function myfunction(){
+            window.open("https://www.silveroakuni.ac.in/");
+        }
+    </script>
+    <h2>the open() and close() methods</h2>
+    
+    <button onclick="openwin()">Open "My Window</button>
+    <button onclick="closewin()">Close "My Window</button>
+    <button onclick="resizewin()">Resize "My Window</button>
+    <script>
+        let mywindow;
+        function openwin(){
+            mywindow = window.open("","","width=300,height=300");
+
+        }
+        function closewin(){
+            mywindow = window.close();
+        }
+        function resizewin(){
+           mywindow.resizeTo(300,600);
+        }
+    </script>
+</body>
+</html>
